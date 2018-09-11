@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Corrector</h1>
+	<!-- ejemplo para corrector ortografico -->
+	<textarea name="corrector" id="texto" cols="30" rows="10" spellcheck="false"></textarea>
+	<p>validar ortografia</p>
+	<button id="validar">Validar la ortografia</button>
+	<button id="novalidar">quitar la validacion</button>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+
+<script>
+	var boton=document.getElementById("validar")
+	var boton2=document.getElementById("novalidar")
+	var texto=document.getElementById("texto")
+
+	boton.addEventListener("click",function(ev){
+		texto.spellcheck = true;
+		texto.focus();
+
+	},true);
+
+		boton2.addEventListener("click",function(ev){
+		texto.spellcheck = false;
+		texto.focus();
+
+	},true);
+</script>
+</body>
+</html>
